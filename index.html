@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropZone | Secure File Sharing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Drop<span>Zone</span></h1>
+            <p>Secure, fast, and simple file sharing.</p>
+        </header>
+
+        <main class="upload-card">
+            <div class="drop-area" id="drop-area">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <h3>Drag & Drop files here</h3>
+                <p>or</p>
+                <input type="file" id="fileElem" multiple accept="*/*" style="display:none">
+                <button class="btn" id="browse-btn">Browse Files</button>
+            </div>
+
+            <div class="upload-progress" id="upload-progress">
+                <!-- File upload items will map here -->
+            </div>
+        </main>
+
+        <section class="available-files-card">
+            <div class="card-header">
+                <h2>Available Downloads</h2>
+            </div>
+            <div class="files-list" id="available-files-list">
+                <!-- Available files will be injected by JS -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
